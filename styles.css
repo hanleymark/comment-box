@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ddd;
+    border-radius: 6px;
+    padding: 1em;
+    max-width: 600px;
+    min-width: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+}
+
+label {
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 2px solid transparent;
+    margin: 0 0 1em 0;
+    padding: 10px;
+    width: 74%;
+}
+
+input[type="button"] {
+    border: 2px solid transparent;
+    background-color: #999;
+    border-radius: 5px;
+    padding: 10px 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+textarea {
+    border: 2px solid transparent;
+    margin: 0;
+    padding: 10px;
+    width: 74%;
+    resize: none;
+}
+
+input[type="button"]:hover {
+    background-color: #333;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #444;
+}
+
+.info {
+    text-align: right;
+    margin: 0;
+    margin-right: 7px;
+}
