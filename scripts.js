@@ -19,8 +19,9 @@ function textAreaChanged() {
     else {
         // Ensure background colour is white if maximum character count not exceeded
         commentBox.style.backgroundColor = "#fff";
+        commentBox.setCustomValidity("");
     }
-    // Issue text warning to user if charcater count exceeded
+    // Issue text warning to user if character count exceeded
     charCountText.innerHTML = `${commentBoxChars}/${maxChars} ${warning}`;
 
 }
@@ -33,9 +34,6 @@ function processForm(event) {
         commentBox.reportValidity();
     }
     else {
-        commentBox.setCustomValidity("");
-
-
         const name = form["name"].value;
         const email = form["email"].value;
         const timeSubmitted = new Date().toLocaleString();
@@ -46,6 +44,8 @@ function processForm(event) {
         element.innerHTML += `<br/>"${comment}"`;
 
         commentList.appendChild(element);
+
+        form.reset();
     }
 
     event.preventDefault();

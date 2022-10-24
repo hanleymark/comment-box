@@ -74,4 +74,5 @@ input:focus, textarea:focus {
     border-radius: 6px;
     padding: 1em;
     margin-top: 1em;
+    width: 100%;
 }
