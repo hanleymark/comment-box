@@ -26,18 +26,28 @@ function textAreaChanged() {
 }
 
 function processForm(event) {
-    const name = form["name"].value;
-    const email = form["email"].value;
     const comment = form["comment"].value;
-    const timeSubmitted = new Date().toLocaleString();
 
-    const commentList = document.querySelector("#comment-list");
-    const element = document.createElement("p");
-    element.innerHTML = `<strong>${name}</strong> (${email}) submitted the following comment, timed at ${timeSubmitted}:`;
-    element.innerHTML += `<br/>"${comment}"`;
+    if (comment.length > maxChars) {
+        commentBox.setCustomValidity(`Comment must be no more than ${maxChars} characters long.`);
+        commentBox.reportValidity();
+    }
+    else {
+        commentBox.setCustomValidity("");
 
-    commentList.appendChild(element);
-    
+
+        const name = form["name"].value;
+        const email = form["email"].value;
+        const timeSubmitted = new Date().toLocaleString();
+
+        const commentList = document.querySelector("#comment-list");
+        const element = document.createElement("p");
+        element.innerHTML = `<strong>${name}</strong> (${email}) submitted the following comment, timed at ${timeSubmitted}:`;
+        element.innerHTML += `<br/>"${comment}"`;
+
+        commentList.appendChild(element);
+    }
+
     event.preventDefault();
 }
 
