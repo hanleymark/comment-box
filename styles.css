@@ -2,13 +2,18 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16;
+}
+
 .container {
-    background-color: #ddd;
+    background-color:rgb(201, 217, 238);
     border-radius: 6px;
     padding: 1em;
     max-width: 600px;
     min-width: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: inherit;
     margin: auto;
 }
 
@@ -26,7 +31,7 @@ input[type="email"] {
     width: 74%;
 }
 
-input[type="button"] {
+input[type="submit"] {
     border: 2px solid transparent;
     background-color: #999;
     border-radius: 5px;
@@ -43,7 +48,7 @@ textarea {
     resize: none;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
     background-color: #333;
 }
 
@@ -55,4 +60,18 @@ input:focus, textarea:focus {
     text-align: right;
     margin: 0;
     margin-right: 7px;
+}
+
+#comment-list {
+    width: 100%;
+    background-color: steelblue;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#comment-list p {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1em;
+    margin-top: 1em;
 }
